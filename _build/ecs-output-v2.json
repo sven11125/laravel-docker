@@ -1,0 +1,24 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "laravel",
+      "image": "adisaputra10/laravel:latest",
+      "cpu": 0,
+      "memory": 256,
+      "portMappings": [
+        {
+          "containerPort": 80
+        }
+      ],
+      "dockerLabels" : {
+        "container" : "laravel",
+        "environment" : "development"
+      },
+      "logConfiguration" : {
+        "logDriver": "json-file",
+        "options": {
+          "labels" : "container,environment"
+        }
+      }
+    }]      
+}

@@ -1,0 +1,24 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "landing-page-eb",
+      "image": "dedewahyuh/laravel:latest",
+      "cpu": 0,
+      "memory": 256,
+      "portMappings": [
+        {
+          "containerPort": 80
+        }
+      ],
+      "dockerLabels" : {
+        "container" : "landing-page-eb",
+        "environment" : "development"
+      },
+      "logConfiguration" : {
+        "logDriver": "json-file",
+        "options": {
+          "labels" : "container,environment"
+        }
+      }
+    }]      
+}
